@@ -3,40 +3,42 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:gravity="center">
 
     <!--Welcome string-->
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/WELCOME_STRING"/>
+        android:text="@string/WELCOME_STRING"
+        style="@style/Text"/>
 
     <!--Activity button-->
     <Button
         android:id="@+id/activity_button"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/ACTIVITY_BUTTON_TEXT"/>
+        android:text="@string/ACTIVITY_BUTTON_TEXT"
+        style="@style/Button"/>
 
     <!--Fragment button-->
     <Button
         android:id="@+id/fragment_button"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/FRAGMENT_BUTTON_TEXT"/>
+        android:text="@string/FRAGMENT_BUTTON_TEXT"
+        style="@style/Button"/>
 
     <!--Service button-->
     <Button
         android:id="@+id/service_button"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/SERVICE_BUTTON_TEXT"/>
+        android:text="@string/SERVICE_BUTTON_TEXT"
+        style="@style/Button"/>
 
     <!--Content provider button-->
     <Button
         android:id="@+id/content_provider_button"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/CONTENT_PROVIDER_BUTTON_TEXT"/>
+        android:text="@string/CONTENT_PROVIDER_BUTTON_TEXT"
+        style="@style/Button"/>
 </LinearLayout>
 

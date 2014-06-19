@@ -11,7 +11,8 @@
 
     <application
         android:label="@string/APP_NAME"
-        android:icon="@drawable/icon">
+        android:icon="@drawable/icon"
+        android:theme="@style/ApplicationTheme">
 
         <activity
             android:name="LooselyCoupledActivity"

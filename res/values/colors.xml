@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <color name="background">#ffc7a79e</color>
+
+    <color name="text">#8C323B</color>
+
+    <color name="button">#4E7782</color>
+    <color name="button_text">@android:color/white</color>
+</resources>
