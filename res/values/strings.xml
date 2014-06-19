@@ -2,4 +2,7 @@
 <resources>
     <string name="app_name">Loosely Coupled</string>
     <string name="WELCOME_STRING">Hello Dutch Mobile Conference!</string>
+
+    <!--Main screen buttons-->
+    <string name="ACTIVITY_BUTTON_TEXT">Activity</string>
 </resources>
