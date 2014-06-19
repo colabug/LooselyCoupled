@@ -10,12 +10,12 @@
         android:targetSdkVersion="19"/>
 
     <application
-        android:label="@string/app_name"
+        android:label="@string/APP_NAME"
         android:icon="@drawable/icon">
 
         <activity
             android:name="LooselyCoupledActivity"
-            android:label="@string/app_name">
+            android:label="@string/APP_NAME">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

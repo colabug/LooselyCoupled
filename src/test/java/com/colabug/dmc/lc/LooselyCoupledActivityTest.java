@@ -50,6 +50,33 @@ public class LooselyCoupledActivityTest
                     equalTo( getResourceString( R.string.ACTIVITY_BUTTON_TEXT ) ) );
     }
 
+    @Test
+    public void shouldHaveFragmentButton() throws Exception
+    {
+        Button fragmentButton = getButton( R.id.fragment_button );
+        assertViewIsVisible( fragmentButton );
+        assertThat( fragmentButton.getText().toString(),
+                    equalTo( getResourceString( R.string.FRAGMENT_BUTTON_TEXT ) ) );
+    }
+
+    @Test
+    public void shouldHaveServiceButton() throws Exception
+    {
+        Button serviceButton = getButton( R.id.service_button );
+        assertViewIsVisible( serviceButton );
+        assertThat( serviceButton.getText().toString(),
+                    equalTo( getResourceString( R.string.SERVICE_BUTTON_TEXT ) ) );
+    }
+
+    @Test
+    public void shouldHaveContentProviderButton() throws Exception
+    {
+        Button contentProviderButton = getButton( R.id.content_provider_button );
+        assertViewIsVisible( contentProviderButton );
+        assertThat( contentProviderButton.getText().toString(),
+                    equalTo( getResourceString( R.string.CONTENT_PROVIDER_BUTTON_TEXT ) ) );
+    }
+
     private Button getButton( int viewId )
     {
         return (Button) activity.findViewById( viewId );
