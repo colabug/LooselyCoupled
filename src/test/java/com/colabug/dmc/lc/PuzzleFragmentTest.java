@@ -37,7 +37,7 @@ public class PuzzleFragmentTest
     }
 
     @Test
-    public void shouldHaveHeart() throws Exception
+    public void shouldHavePuzzle() throws Exception
     {
         ImageView puzzle = (ImageView) fragment.getView().findViewById( R.id.puzzle );
         assertViewIsVisible( puzzle );
