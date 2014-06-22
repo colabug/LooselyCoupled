@@ -7,4 +7,7 @@
 
     <color name="button">#4E7782</color>
     <color name="button_text">@android:color/white</color>
+
+    <!--Background colors-->
+    <color name="red">#ffe53447</color>
 </resources>

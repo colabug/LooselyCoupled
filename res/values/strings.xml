@@ -8,4 +8,8 @@
     <string name="FRAGMENT_BUTTON_TEXT">Fragment</string>
     <string name="SERVICE_BUTTON_TEXT">Service</string>
     <string name="CONTENT_PROVIDER_BUTTON_TEXT">Content Provider</string>
+
+    <!--Love Fragment-->
+    <string name="LOVE_TEXT">Love</string>
+    <string name="HEART_CONTENT_DESC">heart</string>
 </resources>

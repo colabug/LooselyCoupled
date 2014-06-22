@@ -1,5 +1,7 @@
 package com.colabug.dmc.lc.support;
 
+import android.graphics.drawable.Drawable;
+
 import org.robolectric.Robolectric;
 
 /**
@@ -9,8 +11,18 @@ import org.robolectric.Robolectric;
  */
 public class ResourceLocator
 {
-    public static String getResourceString( int resourceId )
+    public static String getResourceString( int id )
     {
-        return Robolectric.application.getApplicationContext().getString( resourceId );
+        return Robolectric.application
+                          .getApplicationContext()
+                          .getString( id );
+    }
+
+    public static Drawable getResourceDrawable( int id )
+    {
+        return Robolectric.application
+                          .getApplicationContext()
+                          .getResources()
+                          .getDrawable( id );
     }
 }

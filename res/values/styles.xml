@@ -16,4 +16,9 @@
         <item name="android:textSize">@dimen/button_text_size</item>
         <item name="android:textColor">@color/button_text</item>
     </style>
+
+    <style name="FragmentText">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/fragment_text_size</item>
+    </style>
 </resources>
