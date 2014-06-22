@@ -18,4 +18,8 @@
 
     <!--Puzzle Fragment-->
     <string name="PUZZLE_CONTENT_DESC">Puzzle Piece</string>
+
+    <!--Star Fragment-->
+    <string name="FAVORITE_TEXT">Favorite</string>
+    <string name="STAR_CONTENT_DESC">Star</string>
 </resources>
