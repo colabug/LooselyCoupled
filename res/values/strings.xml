@@ -12,4 +12,7 @@
     <!--Love Fragment-->
     <string name="LOVE_TEXT">Love</string>
     <string name="HEART_CONTENT_DESC">heart</string>
+
+    <!--Circle Fragment-->
+    <string name="CIRCLE_CONTENT_DESC">Circle</string>
 </resources>
