@@ -11,8 +11,11 @@
 
     <!--Love Fragment-->
     <string name="LOVE_TEXT">Love</string>
-    <string name="HEART_CONTENT_DESC">heart</string>
+    <string name="HEART_CONTENT_DESC">Heart</string>
 
     <!--Circle Fragment-->
     <string name="CIRCLE_CONTENT_DESC">Circle</string>
+
+    <!--Puzzle Fragment-->
+    <string name="PUZZLE_CONTENT_DESC">Puzzle Piece</string>
 </resources>
