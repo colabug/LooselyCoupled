@@ -1,7 +1,6 @@
 package com.colabug.dmc.lc;
 
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -47,12 +46,5 @@ public class HeartFragmentTest
                     equalTo( getResourceDrawable( R.drawable.heart ) ) );
     }
 
-    @Test
-    public void shouldHaveLoveText() throws Exception
-    {
-        TextView love = (TextView) fragment.getView().findViewById( R.id.love_text );
-        assertViewIsVisible( love );
-        assertThat( love.getText().toString(),
-                    equalTo( getResourceString( R.string.LOVE_TEXT ) ) );
-    }
+    // TODO: Add test for the intent
 }

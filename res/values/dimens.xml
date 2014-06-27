@@ -11,4 +11,5 @@
 
     <!--Fragments-->
     <dimen name="fragment_text_size">40dp</dimen>
+    <!--<dimen name="heart_fragment_height">match_parent</dimen>-->
 </resources>

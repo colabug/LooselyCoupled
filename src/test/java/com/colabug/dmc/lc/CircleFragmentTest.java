@@ -19,6 +19,7 @@ import static org.junit.Assert.assertThat;
  * @since 1.0
  */
 @RunWith (RobolectricTestRunner.class)
+
 public class CircleFragmentTest
 {
     CircleFragment fragment;

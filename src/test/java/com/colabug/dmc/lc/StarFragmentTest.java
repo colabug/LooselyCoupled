@@ -1,7 +1,6 @@
 package com.colabug.dmc.lc;
 
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -12,7 +11,6 @@ import org.robolectric.RobolectricTestRunner;
 import static com.colabug.dmc.lc.support.Assert.assertViewIsVisible;
 import static com.colabug.dmc.lc.support.FragmentUtil.startFragment;
 import static com.colabug.dmc.lc.support.ResourceLocator.getResourceDrawable;
-import static com.colabug.dmc.lc.support.ResourceLocator.getResourceString;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertThat;
@@ -46,14 +44,5 @@ public class StarFragmentTest
         assertViewIsVisible( star );
         assertThat( star.getDrawable(),
                     equalTo( getResourceDrawable( R.drawable.star ) ) );
-    }
-
-    @Test
-    public void shouldHaveFavoriteText() throws Exception
-    {
-        TextView favorite = (TextView) fragment.getView().findViewById( R.id.favorite_text );
-        assertViewIsVisible( favorite );
-        assertThat( favorite.getText().toString(),
-                    equalTo( getResourceString( R.string.FAVORITE_TEXT ) ) );
     }
 }

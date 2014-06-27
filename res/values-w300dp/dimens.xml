@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <dimen name="circle_fragment_width">400dp</dimen>
+    <dimen name="star_fragment_height">300dp</dimen>
+</resources>

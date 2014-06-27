@@ -10,7 +10,6 @@
     <string name="CONTENT_PROVIDER_BUTTON_TEXT">Content Provider</string>
 
     <!--Love Fragment-->
-    <string name="LOVE_TEXT">Love</string>
     <string name="HEART_CONTENT_DESC">Heart</string>
 
     <!--Circle Fragment-->
@@ -20,6 +19,5 @@
     <string name="PUZZLE_CONTENT_DESC">Puzzle Piece</string>
 
     <!--Star Fragment-->
-    <string name="FAVORITE_TEXT">Favorite</string>
     <string name="STAR_CONTENT_DESC">Star</string>
 </resources>
