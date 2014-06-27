@@ -2,7 +2,7 @@
 
 <fragment
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/heart"
+    android:id="@+id/heart_fragment"
     android:name="com.colabug.dmc.lc.HeartFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"/>

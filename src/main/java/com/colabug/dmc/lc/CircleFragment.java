@@ -33,17 +33,13 @@ public class CircleFragment extends BaseFragment
 
     private void configureCircle()
     {
-        View circle = layout.findViewById( R.id.circle );
-        if ( circle != null )
+        layout.findViewById( R.id.circle ).setOnClickListener( new View.OnClickListener()
         {
-            circle.setOnClickListener( new View.OnClickListener()
+            @Override
+            public void onClick( View view )
             {
-                @Override
-                public void onClick( View view )
-                {
-                    postToBus( new CircleViewEvent() );
-                }
-            } );
-        }
+                postToBus( new CircleViewEvent() );
+            }
+        } );
     }
 }

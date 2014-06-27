@@ -3,9 +3,9 @@ package com.colabug.dmc.lc;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
 import com.colabug.dmc.lc.navigation.CircleViewEvent;
+import com.colabug.dmc.lc.navigation.HeartViewEvent;
 
 import com.squareup.otto.Subscribe;
 
@@ -16,71 +16,38 @@ import com.squareup.otto.Subscribe;
  */
 public class ViewSystemActivity extends BaseActivity
 {
-    private boolean singlePane = true;
-    private boolean dualPane   = false;
-    private boolean triPane = false;
-
     public void onCreate( Bundle savedInstanceState )
     {
         super.onCreate( savedInstanceState );
-        setContentView( R.layout.activity_view_system );
 
-        configureStar();
-        configureHeart();
+        setContentView( R.layout.activity_view_system );
     }
 
     /**
-     * Handles the selection of the circle.
+     * Handles the selection of the heart.
      *
-     * @param event - circle view event
+     * @param event - heart view event
      */
     @Subscribe
-    public void onCircleSelected (CircleViewEvent event)
+    public void onHeartSelected( HeartViewEvent event )
     {
-        startActivity( PuzzleActivity.createIntent( this ) );
-    }
-
-    // TODO: Move click handling to the fragment with an Otto notification
-    private void configureHeart()
-    {
-        View heart = findViewById( R.id.heart );
-        if ( triPane )
+        if ( isTriPane() )
         {
-//            heart.setOnClickListener( generatePuzzleOnClickListener() );
+            startPuzzle();
         }
-        else if ( dualPane )
+        else if ( isDualPane() )
         {
-            // TODO: Do something
         }
-        else if ( singlePane )
+        else if ( isSinglePane() )
         {
-            heart.setOnClickListener( generateStarOnClickListener() );
+            startStar();
         }
     }
 
-    // TODO: Move click handling to the fragment with an Otto notification
-    private void configureStar()
+    private void startStar()
     {
-        View star = findViewById( R.id.star );
-        if ( star != null )
-        {
-//            star.setOnClickListener( generatePuzzleOnClickListener() );
-            dualPane = true;
-        }
+        startActivity( getStarIntent() );
     }
-
-    private View.OnClickListener generateStarOnClickListener()
-    {
-        return new View.OnClickListener()
-        {
-            @Override
-            public void onClick( View v )
-            {
-                startActivity( getStarIntent() );
-            }
-        };
-    }
-
 
     private Intent getStarIntent()
     {
@@ -90,5 +57,51 @@ public class ViewSystemActivity extends BaseActivity
     public static Intent createIntent( Context context )
     {
         return new Intent( context, ViewSystemActivity.class );
+    }
+
+    public boolean isSinglePane()
+    {
+        return hasAHeart() && !hasAStar() && !hasACircle();
+    }
+
+    private boolean isDualPane()
+    {
+        return false;
+    }
+
+    public boolean isTriPane()
+    {
+        return hasAHeart() && hasAStar() && hasACircle();
+    }
+
+    private boolean hasAHeart()
+    {
+        return findViewById( R.id.heart_fragment ) != null;
+    }
+
+    private boolean hasAStar()
+    {
+        return findViewById( R.id.star_fragment ) != null;
+    }
+
+    private boolean hasACircle()
+    {
+        return findViewById( R.id.circle_fragment ) != null;
+    }
+
+    /**
+     * Handles the selection of the circle.
+     *
+     * @param event - circle view event
+     */
+    @Subscribe
+    public void onCircleSelected( CircleViewEvent event )
+    {
+        startPuzzle();
+    }
+
+    private void startPuzzle()
+    {
+        startActivity( PuzzleActivity.createIntent( this ) );
     }
 }
