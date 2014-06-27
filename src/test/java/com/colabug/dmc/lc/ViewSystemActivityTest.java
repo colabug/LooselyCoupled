@@ -33,9 +33,6 @@ public class ViewSystemActivityTest
         assertNotNull( activity );
     }
 
-    @Test
-    public void shouldFireCircleEventOnClick()
-    {
-        // TODO: Add tests for bus
-    }
+    // TODO: Add tests for each of the view configurations
+    // TODO: Add tests for bus
 }

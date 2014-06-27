@@ -1,6 +1,5 @@
 package com.colabug.dmc.lc;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,18 +9,18 @@ import android.os.Bundle;
  *
  * @since 1.0
  */
-public class PuzzleActivity extends Activity
+public class PuzzleActivity extends BaseActivity
 {
+    public static Intent createIntent( Context context )
+    {
+        return new Intent( context, PuzzleActivity.class );
+    }
+
     @Override
     protected void onCreate( Bundle savedInstanceState )
     {
         super.onCreate( savedInstanceState );
-        setContentView( R.layout.activity_single_pane_puzzle );
-    }
-
-    public static Intent createIntent( Context context )
-    {
-        return new Intent( context, PuzzleActivity.class );
+        setContentView( R.layout.activity_puzzle );
     }
 }
 

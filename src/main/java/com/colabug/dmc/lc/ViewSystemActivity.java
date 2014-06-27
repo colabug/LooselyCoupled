@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import com.colabug.dmc.lc.navigation.CircleViewEvent;
 import com.colabug.dmc.lc.navigation.HeartViewEvent;
+import com.colabug.dmc.lc.navigation.StarViewEvent;
 
 import com.squareup.otto.Subscribe;
 
@@ -16,11 +17,25 @@ import com.squareup.otto.Subscribe;
  */
 public class ViewSystemActivity extends BaseActivity
 {
+    public static Intent createIntent( Context context )
+    {
+        return new Intent( context, ViewSystemActivity.class );
+    }
+
     public void onCreate( Bundle savedInstanceState )
     {
         super.onCreate( savedInstanceState );
 
         setContentView( R.layout.activity_view_system );
+        if ( isSinglePane() )
+        {
+            showFirstFragment();
+        }
+    }
+
+    private void showFirstFragment()
+    {
+        swapFragment( HeartFragment.newInstance(), true );
     }
 
     /**
@@ -40,53 +55,26 @@ public class ViewSystemActivity extends BaseActivity
         }
         else if ( isSinglePane() )
         {
-            startStar();
+            swapFragment( new StarFragment(), true );
         }
     }
 
-    private void startStar()
+    /**
+     * Handles the selection of the star.
+     *
+     * @param event - star view event
+     */
+    @Subscribe
+    public void onStarSelected( StarViewEvent event )
     {
-        startActivity( getStarIntent() );
-    }
-
-    private Intent getStarIntent()
-    {
-        return StarActivity.createIntent( ViewSystemActivity.this );
-    }
-
-    public static Intent createIntent( Context context )
-    {
-        return new Intent( context, ViewSystemActivity.class );
-    }
-
-    public boolean isSinglePane()
-    {
-        return hasAHeart() && !hasAStar() && !hasACircle();
-    }
-
-    private boolean isDualPane()
-    {
-        return false;
-    }
-
-    public boolean isTriPane()
-    {
-        return hasAHeart() && hasAStar() && hasACircle();
-    }
-
-    private boolean hasAHeart()
-    {
-        return findViewById( R.id.heart_fragment ) != null;
-    }
-
-    private boolean hasAStar()
-    {
-        return findViewById( R.id.star_fragment ) != null;
-    }
-
-    private boolean hasACircle()
-    {
-        return findViewById( R.id.circle_fragment ) != null;
+        if ( isTriPane() )
+        {
+            startPuzzle();
+        }
+        else if ( isSinglePane() )
+        {
+            swapFragment( new CircleFragment(), true );
+        }
     }
 
     /**
@@ -100,7 +88,7 @@ public class ViewSystemActivity extends BaseActivity
         startPuzzle();
     }
 
-    private void startPuzzle()
+    public void startPuzzle()
     {
         startActivity( PuzzleActivity.createIntent( this ) );
     }
