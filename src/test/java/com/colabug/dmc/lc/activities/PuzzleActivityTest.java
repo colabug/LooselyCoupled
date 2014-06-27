@@ -1,6 +1,8 @@
-package com.colabug.dmc.lc;
+package com.colabug.dmc.lc.activities;
 
 import android.app.Fragment;
+
+import com.colabug.dmc.lc.R;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -24,9 +26,9 @@ public class PuzzleActivityTest
     public void setUp() throws Exception
     {
         activity = buildActivity( PuzzleActivity.class ).create()
-                                                        .start()
-                                                        .resume()
-                                                        .get();
+        .start()
+        .resume()
+        .get();
     }
 
     @Test

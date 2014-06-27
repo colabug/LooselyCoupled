@@ -1,6 +1,8 @@
-package com.colabug.dmc.lc;
+package com.colabug.dmc.lc.activities;
 
 import android.widget.Button;
+
+import com.colabug.dmc.lc.R;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -30,9 +32,9 @@ public class LooselyCoupledActivityTest
     public void setUp() throws Exception
     {
         activity = buildActivity( LooselyCoupledActivity.class ).create()
-                                                                .start()
-                                                                .resume()
-                                                                .get();
+        .start()
+        .resume()
+        .get();
     }
 
     @Test

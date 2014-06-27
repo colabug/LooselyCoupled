@@ -1,6 +1,9 @@
-package com.colabug.dmc.lc;
+package com.colabug.dmc.lc.fragments;
 
 import android.widget.ImageView;
+
+import com.colabug.dmc.lc.R;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,7 +12,7 @@ import org.robolectric.RobolectricTestRunner;
 
 import static com.colabug.dmc.lc.support.Assert.assertViewIsVisible;
 import static com.colabug.dmc.lc.support.FragmentUtil.startFragment;
-import static com.colabug.dmc.lc.support.ResourceLocator.getResourceDrawable;
+import static com.colabug.dmc.lc.support.ResourceLocator.*;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertThat;
@@ -19,14 +22,14 @@ import static org.junit.Assert.assertThat;
  */
 @RunWith (RobolectricTestRunner.class)
 
-public class PuzzleFragmentTest
+public class HeartFragmentTest
 {
-    PuzzleFragment fragment;
+    HeartFragment fragment;
 
     @Before
     public void setUp() throws Exception
     {
-        fragment = PuzzleFragment.newInstance();
+        fragment = HeartFragment.newInstance();
         startFragment( fragment );
     }
 
@@ -37,12 +40,13 @@ public class PuzzleFragmentTest
     }
 
     @Test
-    public void shouldHavePuzzle() throws Exception
+    public void shouldHaveHeart() throws Exception
     {
-        ImageView puzzle = (ImageView) fragment.getView().findViewById( R.id.puzzle );
-        assertViewIsVisible( puzzle );
-        assertThat( puzzle.getDrawable(),
-                    equalTo( getResourceDrawable( R.drawable.puzzle ) ) );
+        ImageView heart = (ImageView) fragment.getView().findViewById( R.id.heart );
+        assertViewIsVisible( heart );
+        assertThat( heart.getDrawable(),
+                    equalTo( getResourceDrawable( R.drawable.heart ) ) );
     }
 
+    // TODO: Add test for the intent
 }

@@ -1,9 +1,12 @@
-package com.colabug.dmc.lc;
+package com.colabug.dmc.lc.activities;
 
 import android.app.Activity;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 
+import com.colabug.dmc.lc.LooselyCoupledApplication;
+import com.colabug.dmc.lc.R;
+import com.colabug.dmc.lc.fragments.BaseFragment;
 import com.squareup.otto.Bus;
 
 /**

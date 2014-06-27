@@ -8,14 +8,14 @@
     <!--Circle-->
     <fragment
         android:id="@+id/circle_fragment"
-        android:name="com.colabug.dmc.lc.CircleFragment"
+        android:name="com.colabug.dmc.lc.fragments.CircleFragment"
         android:layout_width="@dimen/circle_fragment_width"
         android:layout_height="match_parent"/>
 
     <!--Star-->
     <fragment
         android:id="@+id/star_fragment"
-        android:name="com.colabug.dmc.lc.StarFragment"
+        android:name="com.colabug.dmc.lc.fragments.StarFragment"
         android:layout_width="match_parent"
         android:layout_height="@dimen/star_fragment_height"
         android:layout_toRightOf="@id/circle_fragment"/>
@@ -23,7 +23,7 @@
     <!--Heart-->
     <fragment
         android:id="@+id/heart_fragment"
-        android:name="com.colabug.dmc.lc.HeartFragment"
+        android:name="com.colabug.dmc.lc.fragments.HeartFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_toRightOf="@id/circle_fragment"

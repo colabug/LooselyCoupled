@@ -1,9 +1,10 @@
-package com.colabug.dmc.lc;
+package com.colabug.dmc.lc.activities;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import com.colabug.dmc.lc.R;
 
 public class LooselyCoupledActivity extends Activity
 {

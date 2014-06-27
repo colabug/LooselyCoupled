@@ -1,4 +1,4 @@
-package com.colabug.dmc.lc;
+package com.colabug.dmc.lc.activities;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -22,9 +22,9 @@ public class ViewSystemActivityTest
     public void setUp() throws Exception
     {
         activity = buildActivity( ViewSystemActivity.class ).create()
-                                                            .start()
-                                                            .resume()
-                                                            .get();
+        .start()
+        .resume()
+        .get();
     }
 
     @Test

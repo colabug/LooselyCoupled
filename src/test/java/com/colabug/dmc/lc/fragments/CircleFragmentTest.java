@@ -1,6 +1,8 @@
-package com.colabug.dmc.lc;
+package com.colabug.dmc.lc.fragments;
 
 import android.widget.ImageView;
+
+import com.colabug.dmc.lc.R;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -20,14 +22,14 @@ import static org.junit.Assert.assertThat;
  */
 @RunWith (RobolectricTestRunner.class)
 
-public class StarFragmentTest
+public class CircleFragmentTest
 {
-    StarFragment fragment;
+    CircleFragment fragment;
 
     @Before
     public void setUp() throws Exception
     {
-        fragment = StarFragment.newInstance();
+        fragment = CircleFragment.newInstance();
         startFragment( fragment );
     }
 
@@ -38,11 +40,11 @@ public class StarFragmentTest
     }
 
     @Test
-    public void shouldHaveStar() throws Exception
+    public void shouldHaveCircle() throws Exception
     {
-        ImageView star = (ImageView) fragment.getView().findViewById( R.id.star );
-        assertViewIsVisible( star );
-        assertThat( star.getDrawable(),
-                    equalTo( getResourceDrawable( R.drawable.star ) ) );
+        ImageView circle = (ImageView) fragment.getView().findViewById( R.id.circle );
+        assertViewIsVisible( circle );
+        assertThat( circle.getDrawable(),
+                    equalTo( getResourceDrawable( R.drawable.circle ) ) );
     }
 }

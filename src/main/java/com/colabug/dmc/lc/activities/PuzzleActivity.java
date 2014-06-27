@@ -1,8 +1,9 @@
-package com.colabug.dmc.lc;
+package com.colabug.dmc.lc.activities;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import com.colabug.dmc.lc.R;
 
 /**
  * Used only for single pane views.

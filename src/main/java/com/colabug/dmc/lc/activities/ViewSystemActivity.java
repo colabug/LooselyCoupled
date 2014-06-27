@@ -1,9 +1,13 @@
-package com.colabug.dmc.lc;
+package com.colabug.dmc.lc.activities;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.colabug.dmc.lc.R;
+import com.colabug.dmc.lc.fragments.StarFragment;
+import com.colabug.dmc.lc.fragments.CircleFragment;
+import com.colabug.dmc.lc.fragments.HeartFragment;
 import com.colabug.dmc.lc.navigation.CircleViewEvent;
 import com.colabug.dmc.lc.navigation.HeartViewEvent;
 import com.colabug.dmc.lc.navigation.StarViewEvent;
@@ -35,7 +39,7 @@ public class ViewSystemActivity extends BaseActivity
 
     private void showFirstFragment()
     {
-        swapFragment( HeartFragment.newInstance(), true );
+        swapFragment( HeartFragment.newInstance(), false );
     }
 
     /**

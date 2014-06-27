@@ -1,7 +1,8 @@
-package com.colabug.dmc.lc;
+package com.colabug.dmc.lc.fragments;
 
 import android.app.Fragment;
 
+import com.colabug.dmc.lc.LooselyCoupledApplication;
 import com.colabug.dmc.lc.navigation.BaseViewEvent;
 
 /**

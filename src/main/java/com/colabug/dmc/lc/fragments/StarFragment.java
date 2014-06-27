@@ -1,11 +1,11 @@
-package com.colabug.dmc.lc;
+package com.colabug.dmc.lc.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.colabug.dmc.lc.navigation.HeartViewEvent;
+import com.colabug.dmc.lc.R;
 import com.colabug.dmc.lc.navigation.StarViewEvent;
 
 /**
