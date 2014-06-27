@@ -32,4 +32,10 @@ public class ViewSystemActivityTest
     {
         assertNotNull( activity );
     }
+
+    @Test
+    public void shouldFireCircleEventOnClick()
+    {
+        // TODO: Add tests for bus
+    }
 }

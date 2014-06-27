@@ -1,28 +1,49 @@
 package com.colabug.dmc.lc;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.colabug.dmc.lc.navigation.CircleViewEvent;
+
 /**
  * @since 1.0
  */
-public class CircleFragment extends Fragment
+public class CircleFragment extends BaseFragment
 {
-    @Override
-    public View onCreateView (LayoutInflater inflater,
-                              ViewGroup container,
-                              Bundle savedInstanceState)
-    {
-        View layout = inflater.inflate( R.layout.fragment_circle, container, false );
-
-        return layout;
-    }
+    private View layout;
 
     public static CircleFragment newInstance()
     {
         return new CircleFragment();
+    }
+
+    @Override
+    public View onCreateView( LayoutInflater inflater,
+                              ViewGroup container,
+                              Bundle savedInstanceState )
+    {
+        layout = inflater.inflate( R.layout.fragment_circle, container, false );
+
+        configureCircle();
+
+        return layout;
+    }
+
+    private void configureCircle()
+    {
+        View circle = layout.findViewById( R.id.circle );
+        if ( circle != null )
+        {
+            circle.setOnClickListener( new View.OnClickListener()
+            {
+                @Override
+                public void onClick( View view )
+                {
+                    postToBus( new CircleViewEvent() );
+                }
+            } );
+        }
     }
 }

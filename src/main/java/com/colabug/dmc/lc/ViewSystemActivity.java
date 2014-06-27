@@ -1,20 +1,23 @@
 package com.colabug.dmc.lc;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import com.colabug.dmc.lc.navigation.CircleViewEvent;
+
+import com.squareup.otto.Subscribe;
 
 /**
  * TODO: Handle the 3 configurations
  *
  * @since 1.0
  */
-public class ViewSystemActivity extends Activity
+public class ViewSystemActivity extends BaseActivity
 {
     private boolean singlePane = true;
-    private boolean dualPane = false;
+    private boolean dualPane   = false;
     private boolean triPane = false;
 
     public void onCreate( Bundle savedInstanceState )
@@ -22,19 +25,19 @@ public class ViewSystemActivity extends Activity
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_view_system );
 
-        configureCircle();
         configureStar();
         configureHeart();
     }
 
-    private void configureCircle()
+    /**
+     * Handles the selection of the circle.
+     *
+     * @param event - circle view event
+     */
+    @Subscribe
+    public void onCircleSelected (CircleViewEvent event)
     {
-        View circle = findViewById( R.id.circle );
-        if ( circle != null )
-        {
-            circle.setOnClickListener( generatePuzzleOnClickListener() );
-            triPane = true;
-        }
+        startActivity( PuzzleActivity.createIntent( this ) );
     }
 
     // TODO: Move click handling to the fragment with an Otto notification
@@ -43,7 +46,7 @@ public class ViewSystemActivity extends Activity
         View heart = findViewById( R.id.heart );
         if ( triPane )
         {
-            heart.setOnClickListener( generatePuzzleOnClickListener() );
+//            heart.setOnClickListener( generatePuzzleOnClickListener() );
         }
         else if ( dualPane )
         {
@@ -61,7 +64,7 @@ public class ViewSystemActivity extends Activity
         View star = findViewById( R.id.star );
         if ( star != null )
         {
-            star.setOnClickListener( generatePuzzleOnClickListener() );
+//            star.setOnClickListener( generatePuzzleOnClickListener() );
             dualPane = true;
         }
     }
@@ -78,26 +81,10 @@ public class ViewSystemActivity extends Activity
         };
     }
 
-    private View.OnClickListener generatePuzzleOnClickListener()
-    {
-        return new View.OnClickListener()
-        {
-            @Override
-            public void onClick( View v )
-            {
-                startActivity( getPuzzleIntent() );
-            }
-        };
-    }
 
     private Intent getStarIntent()
     {
         return StarActivity.createIntent( ViewSystemActivity.this );
-    }
-
-    private Intent getPuzzleIntent()
-    {
-        return PuzzleActivity.createIntent( ViewSystemActivity.this );
     }
 
     public static Intent createIntent( Context context )
