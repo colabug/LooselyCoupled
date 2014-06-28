@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="APP_NAME">Loosely Coupled</string>
-    <string name="WELCOME_STRING">Hello Dutch Mobile Conference!</string>
+    <string name="WELCOME_TEXT">Hello Dutch Mobile Conference!</string>
+    <string name="ABOUT_TEXT">Programmed by Corey Leigh Latislaw</string>
 
     <!--Main screen buttons-->
     <string name="ACTIVITY_BUTTON_TEXT">View System</string>

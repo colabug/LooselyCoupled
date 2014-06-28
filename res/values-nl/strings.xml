@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="WELCOME_TEXT">Hallo Dutch Mobile Conference!</string>
+    <string name="ABOUT_TEXT">Geprogrammeerde door Corey Leigh Latislaw</string>
+
+    <!--Main screen buttons-->
+    <string name="ACTIVITY_BUTTON_TEXT">Denkbeelden</string>
+    <string name="SERVICE_BUTTON_TEXT">Service</string>
+
+    <!--Love Fragment-->
+    <string name="HEART_CONTENT_DESC">Hart</string>
+
+    <!--Circle Fragment-->
+    <string name="CIRCLE_CONTENT_DESC">Cirkel</string>
+
+    <!--Puzzle Fragment-->
+    <string name="PUZZLE_CONTENT_DESC">Puzzel</string>
+
+    <!--Star Fragment-->
+    <string name="STAR_CONTENT_DESC">Ster</string>
+</resources>

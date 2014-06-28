@@ -4,6 +4,7 @@
     <color name="background">#ffc7a79e</color>
 
     <color name="text">#8C323B</color>
+    <color name="small_text">#ffb5968e</color>
 
     <color name="button">#4E7782</color>
     <color name="button_text">@android:color/white</color>

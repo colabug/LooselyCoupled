@@ -3,13 +3,15 @@
 <resources>
     <!--Text-->
     <dimen name="text_size">24sp</dimen>
+    <dimen name="small_text_size">12sp</dimen>
+    <dimen name="text_bottom_margin">20dp</dimen>
 
     <!--Buttons-->
     <dimen name="button_width">160dp</dimen>
+    <dimen name="button_height">45dp</dimen>
     <dimen name="button_text_size">20sp</dimen>
     <dimen name="button_margin">10dp</dimen>
 
     <!--Fragments-->
     <dimen name="fragment_text_size">40dp</dimen>
-    <!--<dimen name="heart_fragment_height">match_parent</dimen>-->
 </resources>

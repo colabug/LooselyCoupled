@@ -10,20 +10,26 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/WELCOME_STRING"
+        android:text="@string/WELCOME_TEXT"
         style="@style/Text"/>
+
+    <!--About string-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/text_bottom_margin"
+        android:text="@string/ABOUT_TEXT"
+        style="@style/SmallText"/>
 
     <!--Activity button-->
     <Button
         android:id="@+id/activity_button"
-        android:layout_height="wrap_content"
         android:text="@string/ACTIVITY_BUTTON_TEXT"
         style="@style/Button"/>
 
     <!--Service button-->
     <Button
         android:id="@+id/service_button"
-        android:layout_height="wrap_content"
         android:text="@string/SERVICE_BUTTON_TEXT"
         style="@style/Button"/>
 </LinearLayout>
