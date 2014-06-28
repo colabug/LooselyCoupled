@@ -4,10 +4,8 @@
     <string name="WELCOME_STRING">Hello Dutch Mobile Conference!</string>
 
     <!--Main screen buttons-->
-    <string name="ACTIVITY_BUTTON_TEXT">Activity</string>
-    <string name="FRAGMENT_BUTTON_TEXT">Fragment</string>
+    <string name="ACTIVITY_BUTTON_TEXT">View System</string>
     <string name="SERVICE_BUTTON_TEXT">Service</string>
-    <string name="CONTENT_PROVIDER_BUTTON_TEXT">Content Provider</string>
 
     <!--Love Fragment-->
     <string name="HEART_CONTENT_DESC">Heart</string>

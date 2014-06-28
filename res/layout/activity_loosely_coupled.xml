@@ -20,25 +20,10 @@
         android:text="@string/ACTIVITY_BUTTON_TEXT"
         style="@style/Button"/>
 
-    <!--Fragment button-->
-    <Button
-        android:id="@+id/fragment_button"
-        android:layout_height="wrap_content"
-        android:text="@string/FRAGMENT_BUTTON_TEXT"
-        style="@style/Button"/>
-
     <!--Service button-->
     <Button
         android:id="@+id/service_button"
         android:layout_height="wrap_content"
         android:text="@string/SERVICE_BUTTON_TEXT"
         style="@style/Button"/>
-
-    <!--Content provider button-->
-    <Button
-        android:id="@+id/content_provider_button"
-        android:layout_height="wrap_content"
-        android:text="@string/CONTENT_PROVIDER_BUTTON_TEXT"
-        style="@style/Button"/>
 </LinearLayout>
-
