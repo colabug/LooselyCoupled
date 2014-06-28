@@ -54,9 +54,6 @@ public class ViewSystemActivity extends BaseActivity
         {
             startPuzzle();
         }
-        else if ( isDualPane() )
-        {
-        }
         else if ( isSinglePane() )
         {
             swapFragment( new StarFragment(), true );

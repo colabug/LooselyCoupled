@@ -83,11 +83,6 @@ public class BaseActivity extends Activity
         return !hasAStar() && !hasACircle();
     }
 
-    protected boolean isDualPane()
-    {
-        return false;
-    }
-
     protected boolean isTriPane()
     {
         return hasAHeart() && hasAStar() && hasACircle();
