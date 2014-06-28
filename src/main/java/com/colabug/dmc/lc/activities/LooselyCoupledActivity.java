@@ -12,7 +12,7 @@ public class LooselyCoupledActivity extends Activity
     public void onCreate( Bundle savedInstanceState )
     {
         super.onCreate( savedInstanceState );
-        setContentView( R.layout.main );
+        setContentView( R.layout.activity_loosely_coupled );
 
         findViewById( R.id.activity_button ).setOnClickListener( generateOnClickListener() );
     }
