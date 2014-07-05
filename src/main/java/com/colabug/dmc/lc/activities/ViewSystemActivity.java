@@ -15,7 +15,6 @@ import com.colabug.dmc.lc.navigation.StarViewEvent;
 import com.squareup.otto.Subscribe;
 
 /**
- * TODO: Handle the 3 configurations
  *
  * @since 1.0
  */

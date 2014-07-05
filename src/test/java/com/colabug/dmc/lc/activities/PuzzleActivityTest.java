@@ -26,9 +26,9 @@ public class PuzzleActivityTest
     public void setUp() throws Exception
     {
         activity = buildActivity( PuzzleActivity.class ).create()
-        .start()
-        .resume()
-        .get();
+                                                        .start()
+                                                        .resume()
+                                                        .get();
     }
 
     @Test
